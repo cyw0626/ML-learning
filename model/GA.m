@@ -64,12 +64,12 @@ hold off
         pop_size = size(pop, 1);
         %轮盘赌选择
         ps = fit/sum(fit);
-        pscum = cumsum(ps);%size(pscum)
-        r = rand(1, pop_size);
+        pscum = cumsum(ps);%---每一列的和
+        r = rand(1, pop_size);
         qw = pscum*ones(1, pop_size);
         selected = sum(pscum*ones(1, pop_size)<ones(pop_size, 1)*r)+1;%---rand出来随机数和哪个概率和接近，就属于哪一个概率
-        newpop = pop(selected, :);
-        %交叉
+        newpop = pop(selected, :);%---选出具体的最优的行
+        %交叉
         if pop_size/2 ~= 0%---是否为双数的染色体，使双数的发生交叉
             pop_size = pop_size-1;
         end        
