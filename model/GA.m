@@ -9,8 +9,6 @@ chromsome = 32;%染色体的长度---32个单元
 pc = 0.9;%交叉概率---自己设定
 pm = 0.1;%变异概率---自己设定
 gen = 0;%统计代数---初始化赋值
- 
- 
 %初始化
 init = fix(5*rand(pop_size, chromsome));%---随机产生160行32列的数，数值大小为0-4
 pop = init;
@@ -37,8 +35,6 @@ while gen<Max_gen
     trace(1, gen) = max_fit;
     trace(2, gen) = sum(fit)./length(fit);
 end
- 
- 
 %运行结果
 [f_max gen_ct] = max(bt)%求的最大值以及代数
 maxfit
@@ -53,8 +49,6 @@ xlabel('迭代次数/代'), ylabel('最佳适应度（最大值）');%坐标标�
 plot(gen_ct-1, 0:0.1:f_max+1, 'c-');%画出最大值
 text(gen_ct, f_max+1,   '最大值')
 hold off
- 
- 
     function  [fitness] = obj_fitness(pop)
         %适应度计算函数
         [r c] = size(pop);
@@ -66,8 +60,6 @@ hold off
             end
         end
     end
- 
- 
     function newpop = ga(pop, pc, pm, chromsome, fit)
         pop_size = size(pop, 1);
         %轮盘赌选择
