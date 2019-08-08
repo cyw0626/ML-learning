@@ -83,18 +83,18 @@ hold off
         end        
         for i = 1:2:pop_size-1%---两个选为一组
             while pc>rand%---一定概率下发生交叉
-				c_pt=randi([1,31],1,1)%---从1-31中随机选一个数
-				%---片段交叉操作				
+		c_pt=randi([1,31],1,1)%---从1-31中随机选一个数
+		%---片段交叉操作				
                 pop_tp1 = newpop(i, :);
-				pop_tp2 = newpop(i+1, :);
-				%---考虑是交换上部还是下部分
-				if rand<0.5
-					newpop(i+1, 1:c_pt) = pop_tp1(1, 1:c_pt);
+		pop_tp2 = newpop(i+1, :);
+		%---考虑是交换上部还是下部分
+		if rand<0.5
+			newpop(i+1, 1:c_pt) = pop_tp1(1, 1:c_pt);
                 	newpop(i, 1:c_pt) = pop_tp2(1, 1:c_pt);
-				else
-					newpop(i+1, c_pt:chromsome) = pop_tp1(1, c_pt:chromsome);
+		else
+			newpop(i+1, c_pt:chromsome) = pop_tp1(1, c_pt:chromsome);
                 	newpop(i, c_pt:chromsome) = pop_tp2(1, c_pt:chromsome);
-				end
+		end
             end 
         end
         % 变异
