@@ -111,7 +111,7 @@ class BPNN:
                 
         #然后更新输入层权值
         for i in range(self.num_in):
-            for i in range(self.num_hidden):
+            for j in range(self.num_hidden):
                 change = hidden_deltas[j]*self.active_in[i]
                 self.wight_in[i][j] = self.wight_in[i][j] + lr*change + m* self.ci[i][j]
                 self.ci[i][j] = change
