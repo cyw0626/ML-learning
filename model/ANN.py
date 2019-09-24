@@ -1,4 +1,8 @@
-# -*- coding: utf-8 -*- 
+"""
+===============
+  人工神经网络
+===============
+"""
 import numpy as np
 import math
 import random
@@ -167,4 +171,3 @@ def demo():
      
 if __name__ == '__main__':
     demo()
- 
