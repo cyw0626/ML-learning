@@ -1,5 +1,9 @@
-#蚁群算法源码网址(https://blog.csdn.net/fanxin_i/article/details/80380733)
-# -*- coding: utf-8 -*-
+"""
+==============
+   蚁群算法
+==============
+"""
+
 import random
 import copy
 import time
