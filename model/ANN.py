@@ -3,15 +3,13 @@
   人工神经网络
 ===============
 """
+
 import numpy as np
 import math
 import random
 import string
 import matplotlib as mpl
 import matplotlib.pyplot as plt
- 
-#random.seed(0)  #当我们设置相同的seed，每次生成的随机数相同。如果不设置seed，则每次会生成不同的随机数
-                #参考https://blog.csdn.net/jiangjiang_jian/article/details/79031788
  
 #生成区间[a,b]内的随机数
 def random_number(a,b):
